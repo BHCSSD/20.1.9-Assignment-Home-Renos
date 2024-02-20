@@ -13,20 +13,33 @@ This assignment requires 3 global variables (`roomWidth`, `roomLength`, & `roomH
 ## Next 70% - Base Functionality
 Begin by asking the user for the `roomWidth`, `roomLength`, & `roomHeight` of the room, triggered with the 'e'.  Using 3 consecutive `window.prompts`, ask the user for these 3 values, and set the global variables.
 
-Function 1: flooring (Parameters: width and length of the room )
-- Set up the function so that it takes in the two required variables as parameters.  Then call the function using the appropriate keypress.
-- Use a cost of $1.88/square ft for your carpet.
-- Calculate the total Square Feet of floor in the room.
-- Calculate the total and print the total price into the display box.
+### Function 1: flooring (Parameters: width and length of the room )
+1. Set up the function so that it takes in the two required variables as parameters.  Then call the function using the appropriate keypress.
+2. Use a cost of $1.88/square ft for your carpet.
+3.  Calculate the total Square Feet of floor in the room.
+4.  Calculate the total and **print** the total price into the display box.
+```
+Your total square feet is ___
+Our carpeting price per square foot is $____
+Your carpeting cost will be $___
+```
 
-Function 2: paint (Parameters: width, length, and height of the room )
-- Set up the function so that it takes in the three required variables as parameters.  Then call the function using the appropriate keypress.
-- Use a cost of $26.50/gallon for paint.
-- Calculate the total square footage for your four walls.
-- Calculate the number of gallons of paint it will take.
-- Calculate and print the cost into the display box.
 
-Function 3: hotTub ( Parameters: width and length of the room)
+### Function 2: paint (Parameters: width, length, and height of the room )
+1. Set up the function so that it takes in the three required variables as parameters.  Then call the function using the appropriate keypress.
+2. Use a cost of $26.50/gallon for paint.
+3. Calculate the total square footage for your four walls.
+4. Calculate the number of gallons of paint it will take.
+ - You should look up the ceiling function for how to round up if you want to make it more realistic.  (You can not buy part of a can of paint.)  
+5. Calculate and print the cost into the display box as follows.
+```
+The total square footage of your four walls and the ceiling is __
+This requires ___ gallons of paint.
+Price per gallon is $___
+Your total for paint will be $___
+```
+### Function 3: hotTub ( Parameters: width and length of the room)
+Our store sells the following **CIRCULAR** hot tubs.  We will assume that they will purchase the **LARGEST** of the three that would fit in their room.
 
 | Model          | Diameter (including walking space) | Price  |
 |----------------|------------------------------------|--------|
@@ -35,17 +48,32 @@ Function 3: hotTub ( Parameters: width and length of the room)
 | Biggest Bubbly | 18 feet (5.49 metres)              | $6100  |
 | No hottub avaliable | If less than 10 feet or 3.05 metres             | $-  |
 
-- Set up the function so that it takes in the two required variables as parameters.  Then call the function using the appropriate keypress.
-- Based on their room dimensions, tell them the price of the largest of the 3 hot tubs they can fit in the room.
+1.  Set up the function so that it takes in the two required variables as parameters.  Then call the function using the appropriate keypress.
+2.  Based on their room dimensions, tell them the price of the largest of the 3 hot tubs they can fit in the room.
+   - Note that there is a subtle trick to figuring out the hot tub size.  Remember it must be a perfect circle. the `dist()` function will help you
+    - 5% will be permanently lost if you recommend the wrong tub or a tub that does not fit in the room.  Be thoughtful about what is recommended and test it thoroughly.
+
+```
+The largest hot tub that will fit in your room is the Medium Masterpiece It costs $4000
+```
 
 ## Next 10% - Fourth Option
-Add a 4th option to the menu with a new method and calculation of your choice.
+Add a 4th option to the menu with a new method and calculation of your choice. Think about other things you might want to calculate (rolls of wall paper, etc.).  Pass in only the measurements you need but feel free to ask for extra information if needed (such as asking for a fence height or a rug shape).
 
 ## Next 10% - Not Allowing Zeros 
-Alter your keypress function OR the purchase functions so that the display box is blank if any of the dimensions are zero.
+Currently, if the user chooses one of the purchase options before entering the dimensions of the room, then everything calculates based on zero.  
+
+Alter your keypress function OR the purchase functions so that the display box is blank if any of the dimensions are zero.  (Alternatively, you could print an error message.)
 
 ## Final 10% - Paint and/or Carpet Options
-Modify your functions to present the user with some paint and/or flooring options.
+You will get these marks if you can show that you attempted this challenge, not to succeed.
+
+Modify your functions to present the user with some paint and/or flooring options. 
+1. They should choose from the usual menu
+2. If they choose flooring or paint you give them one more choice of TYPE of flooring or paint. This could be accomplished with an additional window.prompts, new keypresses or even by adding buttons (most people use an additional window.prompt because it is way easier).
+    -  Do you want our deluxe carpet for $2.05 per square foot or our hardwood at $5.60 per square foot.
+3. You only need to apply this to ONE of the flooring or paint, not both.
+4. Once the user has selected their sub-option, their flooring and paint costs should be calculated using the appropriate price. 
 
 ## Start code
 ```
